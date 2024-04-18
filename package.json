@@ -3,7 +3,7 @@
     "productName": "programmingcompetationtemplate",
     "version": "1.0.0",
     "description": "just template :)",
-    "type": "commonjs",
+    "type": "module",
     "main": "server/js/index.js",
     "scripts": {
         "dev": "node server/js/index.js",
