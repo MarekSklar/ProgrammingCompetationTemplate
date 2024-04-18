@@ -1,17 +1,15 @@
 import input from "./tools/input/main.js";
-import { dirname } from "path";
 import path from "path";
-import { fileURLToPath } from 'url';
+import rootDir from "./utils/rootDir.js";
 import express from "express";
 
 // setup
-const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 
-app.use(express.static(path.join(__dirname, '../../client')));
+app.use(express.static(path.join(rootDir, 'client')));
 // index
 app.get('/', (_, res) => {
-    res.sendFile(path.resolve('client/html/index.html'));
+    res.sendFile(path.join(rootDir, 'client/html/index.html'));
 });
   
 // port
