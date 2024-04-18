@@ -6,3 +6,7 @@ node_modules
 
 # tailwind build
 tailwindBuild.css
+
+# js builds
+/server/js/**
+/client/js/**

@@ -8,25 +8,14 @@ import express from "express";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 
-app.use(express.static(__dirname + "/public"));
-
-/*index*/
-
+app.use(express.static(path.join(__dirname, '../../client')));
+// index
 app.get('/', (_, res) => {
     res.sendFile(path.resolve('client/html/index.html'));
 });
-
-/*404 error*/
-
-app.get('*', function(req, res){
-    res.redirect("https://http.cat/404");
-});
   
-/*port*/
-  
-app.listen(1234, () => {
-    console.log('App listening on port 1234!');
-});
+// port
+app.listen(1234);
 
 const inputA = await input("input A: ");
 const inputB = await input("input B: ");

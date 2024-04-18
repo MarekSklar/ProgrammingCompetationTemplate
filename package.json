@@ -8,8 +8,9 @@
     "scripts": {
         "dev": "node server/js/index.js",
         "build": "tsc -p tsconfig.server.json && tsc -p tsconfig.client.json",
-        "style": "npx tailwindcss -i ./client/css/tailwind.css -o ./client/css/tailwindBuild.css",
-        "dev-b": "npm run build && npm run style && npm run dev"
+        "style": "npx tailwindcss -i ./client/css/tailwind.css -o ./client/css/tailwindBuild.css --watch",
+        "dev-b": "npm run build && npm run dev",
+        "dev-fb": "npm run build && npm run style && npm run dev && npx tailwindcss -i ./client/css/tailwind.css -o ./client/css/tailwindBuild.css"
     },
     "keywords": [],
     "author": {
@@ -17,8 +18,6 @@
     },
     "license": "MIT",
     "dependencies": {
-        "argon2-browser": "^1.18.0",
-        "electron-squirrel-startup": "^1.0.0",
         "express": "^4.19.2",
         "undici-types": "^6.11.1"
     },
