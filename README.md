@@ -5,7 +5,7 @@ This template is a basic node.js application based on typescript with a support 
 ```
 npm install
 npm run setup
-npm run dev
+npm run app
 ```
 
 ## How to use things?
